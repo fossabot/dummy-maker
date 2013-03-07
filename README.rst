@@ -20,7 +20,7 @@ I'm assuming you have virtualenv and pip. If not, `brew install` those things.
 Running
 -------------
 
-::
+Usage::
     Usage: dummy.py [options]
 
     Options:
