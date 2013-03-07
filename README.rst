@@ -44,10 +44,10 @@ Running
 Example
 -----------
 
-I want to create 10 APIDs with the tags "whiskey,beer" while sleeping for a half second
+I want to create 1000 APIDs with 200 of them getting tagged "whiskey", and 400 getting tagged "beer" while sleeping for a half second
 between each API call.
 
 .. sourcecode:: bash
 
-    ./dummy-maker/dummy.py --number=10 --tags=whiskey,beer --delay=0.5 --api-key=YOURKEY --api-secret=YOURSECRET
+    ./dummy-maker/dummy.py --number=1000 --tags=whiskey:0.2,beer:0.4 --delay=0.5 --api-key=YOURKEY --api-secret=YOURSECRET
 
