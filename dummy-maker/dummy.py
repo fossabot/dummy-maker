@@ -7,8 +7,6 @@ import requests
 import json
 from time import sleep
 
-APIHOST = "http://s0247:8003"
-
 parser = OptionParser()
 parser.add_option("-n", "--number", dest="number", help="Number of devices to create", type="int")
 parser.add_option("-d", "--dry-run", dest="dry_run", action="store_true", help="Just print what would happen -- no API calls", default=False)
@@ -16,6 +14,7 @@ parser.add_option("-k", "--api-key", dest="api_key", help="UA API key")
 parser.add_option("-s", "--api-secret", dest="api_secret", help="UA API secret")
 parser.add_option("-t", "--tags", dest="tag_string", help="Comma-delimited list of tags", type="string")
 parser.add_option("", "--delay", dest="delay", help="Sleep between requests. (In seconds. Can be a float.)", type="float")
+parser.add_option("", "--api-host", dest="hostname", help="API host, defaults to production (https://go.urbanairship.com)", default="https://go.urbanairship.com")
 (options, args) = parser.parse_args()
 
 if not options.number:
@@ -30,7 +29,7 @@ def register_device(uuid, tag_string):
         print "--- Dry run, no registration made"
     else:
         r = requests.put(
-                "%s/api/apids/%s" % (APIHOST, uuid),
+                "%s/api/apids/%s" % (options.hostname, uuid),
                 headers={'Content-type': 'application/json'},
                 auth=(options.api_key, options.api_secret),
                 data=tag_string)

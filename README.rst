@@ -36,6 +36,9 @@ Running
       -t TAG_STRING, --tags=TAG_STRING
                             Comma-delimited list of tags
       --delay=DELAY         Sleep between requests. (In seconds. Can be a float.)
+      --api-host=HOSTNAME   API host, defaults to production
+                               (https://go.urbanairship.com)
+
 
 Example
 -----------
