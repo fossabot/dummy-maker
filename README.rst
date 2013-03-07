@@ -35,3 +35,15 @@ Running
                             UA API secret
       -t TAG_STRING, --tags=TAG_STRING
                             Comma-delimited list of tags
+      --delay=DELAY         Sleep between requests. (In seconds. Can be a float.)
+
+Example
+-----------
+
+I want to create 10 APIDs with the tags "whiskey,beer" while sleeping for a half second
+between each API call.
+
+.. sourcecode:: bash
+
+    ./dummy-maker/dummy.py --number=10 --tags=whiskey,beer --delay=0.5
+

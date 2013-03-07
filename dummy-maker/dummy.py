@@ -5,6 +5,7 @@ from optparse import OptionParser
 import sys
 import requests
 import json
+from time import sleep
 
 APIHOST = "http://s0247:8003"
 
@@ -14,6 +15,7 @@ parser.add_option("-d", "--dry-run", dest="dry_run", action="store_true", help="
 parser.add_option("-k", "--api-key", dest="api_key", help="UA API key")
 parser.add_option("-s", "--api-secret", dest="api_secret", help="UA API secret")
 parser.add_option("-t", "--tags", dest="tag_string", help="Comma-delimited list of tags", type="string")
+parser.add_option("", "--delay", dest="delay", help="Sleep between requests. (In seconds. Can be a float.)", type="float")
 (options, args) = parser.parse_args()
 
 if not options.number:
@@ -33,6 +35,10 @@ def register_device(uuid, tag_string):
                 auth=(options.api_key, options.api_secret),
                 data=tag_string)
         print r
+
+    if options.delay:
+        print "Sleeping %s seconds..." % options.delay
+        sleep(options.delay)
 
 for i in range(1, options.number + 1):
     uuid = uuid4()
