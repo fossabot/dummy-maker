@@ -45,5 +45,5 @@ between each API call.
 
 .. sourcecode:: bash
 
-    ./dummy-maker/dummy.py --number=10 --tags=whiskey,beer --delay=0.5
+    ./dummy-maker/dummy.py --number=10 --tags=whiskey,beer --delay=0.5 --api-key=YOURKEY --api-secret=YOURSECRET
 

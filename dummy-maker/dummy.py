@@ -36,10 +36,6 @@ def register_device(uuid, tag_string):
                 data=tag_string)
         print r
 
-    if options.delay:
-        print "Sleeping %s seconds..." % options.delay
-        sleep(options.delay)
-
 for i in range(1, options.number + 1):
     uuid = uuid4()
     progress_info = '%s of %s: %s' % (i, options.number, uuid)
@@ -51,3 +47,7 @@ for i in range(1, options.number + 1):
         print '%s with no tags' % (progress_info)
 
     register_device(uuid, json.dumps(data))
+
+    if options.delay:
+        print "Sleeping %s seconds..." % options.delay
+        sleep(options.delay)
