@@ -34,7 +34,8 @@ Running
       -s API_SECRET, --api-secret=API_SECRET
                             UA API secret
       -t TAG_STRING, --tags=TAG_STRING
-                            Comma-delimited list of tags
+                            Comma-delimited list of tags and probability of being
+                            assigned. (Example: beer:0.1,whiskey:0.5)
       --delay=DELAY         Sleep between requests. (In seconds. Can be a float.)
       --api-host=HOSTNAME   API host, defaults to production
                                (https://go.urbanairship.com)
