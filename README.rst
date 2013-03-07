@@ -20,9 +20,10 @@ I'm assuming you have virtualenv and pip. If not, `brew install` those things.
 Running
 -------------
 
-Usage::
-    Usage: dummy.py [options]
+::
 
+    Usage: dummy.py [options]
+    
     Options:
       -h, --help            show this help message and exit
       -n NUMBER, --number=NUMBER
