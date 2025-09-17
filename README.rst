@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Furbanairship%2Fdummy-maker.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Furbanairship%2Fdummy-maker?ref=badge_shield)
+
 ========
 dummy-maker
 ========
@@ -55,3 +57,7 @@ between each API call.
 
     ./dummy-maker/dummy.py --number=1000 --tags=whiskey:0.2,beer:0.4 --delay=0.5 --api-key=YOURKEY --api-secret=YOURSECRET
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Furbanairship%2Fdummy-maker.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Furbanairship%2Fdummy-maker?ref=badge_large)
